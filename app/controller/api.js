@@ -348,6 +348,8 @@ class HomeController extends Controller {
     const {
       ctx
     } = this;
+    const username = ctx.cookies.get('user')
+
     const data = await this.ctx.model.Order.aggregate([{
       $lookup: {
         from: 'book', // 关联的集合
@@ -360,7 +362,7 @@ class HomeController extends Controller {
 
     ctx.body = {
       code: 0,
-      value: data
+      value: data.filter((e) => e.buyer === username)
     }
   }
   async orderPj() {

@@ -35,7 +35,8 @@ module.exports = app => {
             default: false
         },
         auth: {
-            type: Array
+            type: Array,
+            default: ['home', 'book', 'order']
         }
 
     });
