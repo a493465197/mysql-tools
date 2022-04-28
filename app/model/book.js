@@ -23,7 +23,7 @@ module.exports = app => {
         },
         id: {
             type: String,
-            default: Math.random().toString().slice(2,8)
+            default: () => Math.random().toString().slice(2,8)
         },
         mainImg: {
             type: Object
