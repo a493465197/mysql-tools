@@ -29,6 +29,12 @@ module.exports = appInfo => {
       enable: false,
     },
   };
+  config.mongoose = {
+    client:{
+    url:'mongodb://192.169.0.111/book',
+    options:{}
+    }
+  }
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
