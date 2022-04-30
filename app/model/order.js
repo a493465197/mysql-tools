@@ -28,6 +28,9 @@ module.exports = app => {
             type: String,
             default: () => Math.random().toString().slice(2,8)
         },
+        phone: String,
+        name: String,
+        addr: String,
         time: {
             type: Number,
             default: Date.now()

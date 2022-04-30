@@ -186,7 +186,9 @@ class HomeController extends Controller {
       username
     });
     if (user && user.isAdmin) {
-      let users = await this.ctx.model.User.find();
+      let users = await this.ctx.model.User.find({
+        ...ctx.request.body
+      });
       ctx.body = {
         code: 0,
         value: users
@@ -303,7 +305,8 @@ class HomeController extends Controller {
     const username = ctx.cookies.get('user')
     let book
     book = await this.ctx.model.Book.find({
-      buyer: null
+      buyer: null,
+      ...ctx.request.body
     });
     ctx.body = {
       code: 0,
@@ -337,6 +340,10 @@ class HomeController extends Controller {
     await this.ctx.model.Order.create({
       buyer: username,
       bookId: ctx.request.body.id,
+      name: ctx.request.body.name,
+      phone: ctx.request.body.phone,
+      addr: ctx.request.body.addr,
+
     })
 
 
