@@ -30,31 +30,31 @@ module.exports = appInfo => {
   config.assets = {
     // publicPath: '/a/',
   };
-  // config.mysql = {
-  //   // 单数据库信息配置
-  //   client: {
-  //     // host
-  //     host: '144.202.8.223',
-  //     // 端口号
-  //     port: '3306',
-  //     // 用户名
-  //     user: 'dede',
-  //     // 密码
-  //     password: 'dede',
-  //     // 数据库名
-  //     database: 'dede',
-  //   },
-  //   // 是否加载到 app 上，默认开启
-  //   app: true,
-  //   // 是否加载到 agent 上，默认关闭
-  //   agent: false,
-  // }
-  config.mongoose = {
-    client:{
-    url:'mongodb://124.221.66.29/book',
-    options:{}
-    }
+  config.mysql = {
+    // 单数据库信息配置
+    client: {
+      // host
+      host: '3607h09y06.qicp.vip',
+      // 端口号
+      port: '8306',
+      // 用户名
+      user: 'mysqltools',
+      // 密码
+      password: 'mysqltools',
+      // 数据库名
+      database: 'mysqltools',
+    },
+    // 是否加载到 app 上，默认开启
+    app: true,
+    // 是否加载到 agent 上，默认关闭
+    agent: false,
   }
+  // config.mongoose = {
+  //   client:{
+  //   url:'mongodb://124.221.66.29/book',
+  //   options:{}
+  //   }
+  // }
   config.security = {
     csrf: {
       enable: false,

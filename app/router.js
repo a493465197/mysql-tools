@@ -34,6 +34,8 @@ module.exports = app => {
   router.post('/api/getOrderList', controller.api.getOrderList);
   router.post('/api/orderPj', controller.api.orderPj);
   router.post('/api/orderPjList', controller.api.orderPjList);
+  router.post('/api/upload', controller.api.upload);
+  router.post('/api/runSql', controller.api.runSql);
 
   router.post('/common/upload', controller.common.upload);
 

@@ -19,8 +19,8 @@ module.exports = {
       enable: false,
     },
   },
-  mongoose: {
-    enable: true,
-    package: 'egg-mongoose',
-  }
+  // mongoose: {
+  //   enable: true,
+  //   package: 'egg-mongoose',
+  // }
 };
