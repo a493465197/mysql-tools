@@ -36,11 +36,13 @@ class HomeController extends Controller {
     const buffer = await fs.promises.readFile(path.resolve(__dirname, files.file.filepath))
     const string = buffer.toString()
     const arr = string.split('\n')
-    console.log(arr)
     for (let i = 0; i < arr.length-2; i = i + 300) {
       await this.app.mysql.insert('data', arr.slice(i,i+ 500).map((e) => JSON.parse(e)))
     }
-    ctx.body = 'ok';
+    ctx.body = {
+      code: 0,
+      value: arr.map((e) => JSON.parse(e))
+    };
   }
   
 
