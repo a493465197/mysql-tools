@@ -1,13 +1,16 @@
-# faka-egg
+# mysql explain analyze可视化
+使用技术：html/css/js/react/antd/nodejs/mysql等
 
+测试地址：http://3607h09y06.qicp.vip:7012/
 
+测试账号：账号123密码123
 
-## QuickStart
+项目介绍：支持mysql大量数据导入并查询，支持数据库执行情况查看
 
-<!-- add docs here for user -->
+任何问题联系qq 3167805287 微信 lzraipi
 
-see [egg docs][egg] for more detail.
-
+### 更多项目
+http://zlidev.com/
 ### Development
 
 ```bash
@@ -22,12 +25,3 @@ $ open http://localhost:7001/
 $ npm start
 $ npm stop
 ```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-- Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
-
-[egg]: https://eggjs.org
